@@ -12,6 +12,7 @@
        $num = 0x1A;
        $num = 0b1010;
        $num = 010;
+       $num = 3e2;
    </p>
 
 
@@ -20,7 +21,23 @@
         var_dump($num);
     
         echo "O valor da variável é $num;" 
-    ?>    
+    ?> 
+    
+    <p>Testando coerções</p>
+
+    <?php 
+        $numero = (boolean)28;
+        var_dump($numero);
+
+        echo "O número é $numero sendo portanto um valor verdadeiro;"
+    ?>
+
+    <p>Testando arrays</p>
+
+    <?php 
+        $vet = [6, 2, 9, 3, 5];
+        var_dump($vet);
+    ?>
         
 </body>
     
