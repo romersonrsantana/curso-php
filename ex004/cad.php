@@ -9,8 +9,8 @@
     <header>
         <h1>Processamento de dados</h1>
         <?php 
-        $nome = $_GET["nome"];
-        $sobrenome = $_GET["sobrenome"];
+        $nome = $_GET["nome"] ?? "sem nome";
+        $sobrenome = $_GET["sobrenome"] ?? "sem sobrenome";
 
         echo "<p>É um prazer te conhecer $nome $sobrenome! Este é meu site!</p>"
         ?>
