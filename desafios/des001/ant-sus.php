@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <main>
+        <h1>Resultado Final</h1>
         <?php
             $numero = $_GET["numero"];
             $antess = $numero - 1;
