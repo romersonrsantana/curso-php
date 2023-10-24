@@ -11,10 +11,10 @@
 
             <?php 
                 $descricao = $_GET["ident"];
-                $numINT = round($descricao);
-                $numDEC = fmod($descricao, 1);
+                $numINT = round($descricao); //considera a parte inteira;  
+                $numDEC = fmod($descricao, 1); // o resto da divisão inteira entre o número e 1;
 
-                echo "<p>O número inteiro é $numINT </p><p> A parte decimal corresponde a " . number_format($numDEC, 3);
+                echo "<p>O número inteiro é " . number_format($numINT, 0, "," , ".")  . "</p><p> A parte decimal corresponde a " . number_format($numDEC, 3, "," , ".");
             ?>
         </main>
     </body>
