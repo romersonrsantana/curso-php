@@ -11,18 +11,25 @@
                 <?php
 
                     setcookie("Dia-da-Semana", "SEGUNDA", time() + 3600); //Estou com um cookie que é o "Dia-da-semana" que está com um valor que é "segunda"
+                    
+                    session_start();
+                    $_SESSION["teste"] = "Funcionou";
+        
 
-                    echo "<h1>Super Global _GET</h1>";
+                    echo "<p>Super Global _GET</p>";
                     var_dump($_GET); //http://127.0.0.1/curso-php/ex005/superglobais.php?nome=Guanabara&idade=45 ==> passando valores pela url;'
 
-                    echo "<h1>Super global _POST </h1>";
+                    echo "<p>Super global _POST </p>";
                     var_dump($_POST);
 
-                    echo "<h1> Super global _REQUEST</h1>";
+                    echo "<p> Super global _REQUEST</p>";
                     var_dump($_REQUEST);
 
-                    echo "<h1> Super Global _COOKIE";
-                    var_dump($_COOKIE);
+                    echo "<p> Super Global _COOKIE</p>";
+                    var_dump($_COOKIE); //São pequenas variáveis que ficam salvas dentro do navegador, por um periodo de tempo pré estabelecido.
+
+                    echo "<p> Super Global _SESSION1</p>";
+                    var_dump($_SESSION);
                 
                 ?>      
             </pre>
