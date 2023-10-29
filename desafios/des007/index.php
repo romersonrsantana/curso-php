@@ -10,7 +10,7 @@
         <main>
             <?php 
                 $valor1 = $_GET['dividendo'] ?? 0; //qualicence obrigatório
-                $valor2 = $_GET['divisor'] ?? 0;
+                $valor2 = $_GET['divisor'] ?? 1; //não é possivel dividir qualquer número por zero;
 
                 $total = intdiv($valor1, $valor2);
                 $resto = $valor1 % $valor2;
@@ -20,12 +20,12 @@
                 <ul>
                     <li>
                         <label for="dividendo">Dividendo</label>
-                        <input type="number" name="dividendo" id="IDdividendo" value="<?=$valor1?>">
+                        <input type="number" name="dividendo" id="IDdividendo" min = "0" value="<?=$valor1?>"> <!-- Para resolver o exercício é necessário considerar as regras que envolvem a divisão, como exemplo é necessário estipular um valor mínimo para a divisão, pois não existe divisão por zero -->
                     </li>
                     
                     <li>
                         <label for="divisor">Divisor</label>
-                        <input type="number" name="divisor" id="IDdivisor" value="<?=$valor2?>">
+                        <input type="number" name="divisor" id="IDdivisor" min = "1" value="<?=$valor2?>">
                     </li>
                     
                     <input type="submit" value="Dividir">
