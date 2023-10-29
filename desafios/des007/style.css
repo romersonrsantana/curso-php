@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+body{
+    font: 100%;
+}
+main{
+    text-align: center;
+    background-color: royalblue;
+    margin: auto;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 1.3em;
+    max-width: 80%;
+    min-height: 219px;
+    
+}
+
+main li{
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+label{
+    color: beige;
+    
+}
+
+input{
+    border-radius: 6px;
+    padding: 6px;
+    
+}
+
+section{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 3.1em;
+}
+
+section h1{
+    font-size: 0.9em;
+    font-family: cursive;
+}
+
+section > div{
+    margin-top: 9px;
+    background-color: rgba(36, 75, 247, 0.205);
+}
+
+div.dividendo{
+    float: left;
+    background-color: aqua;
+    border-right: solid;
+    border-width: 6px;
+    min-width: 42.2%;
+    min-height: 157px;
+    padding-right: 1%;
+    margin-left: 12.7%;
+    padding-bottom: 12px;
+    
+
+}
+
+div.divisor{
+    border-bottom: solid;
+    background-color: aquamarine;
+    max-width: 39%;
+    margin-left: 56%;
+    padding-bottom: 9%;
+    border-width: 6px;
+}
+
+div.quociente{
+    float: right;
+    background-color: rgba(127, 255, 212, 0.726);
+    min-width: 36%;
+    margin-right: 8.3%;
+    padding-top: 6px;
+}
+
+div.resto{
+    background-color: blanchedalmond;
+    clear: both;
+    max-width: 39%;
+    margin-left: 6%;
+    position: relative;
+    right: -2.1em;
+    
+    
+}

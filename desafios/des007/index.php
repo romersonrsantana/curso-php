@@ -4,33 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Desafio 7</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <main>
             <?php 
-                $valor1 = $_GET["dividendo"];
-                $valor2 = $_GET["divisor"];
-                
+                $valor1 = $_GET['dividendo'] ?? 0; //qualicence obrigatório
+                $valor2 = $_GET['divisor'] ?? 0;
+
+                $total = intdiv($valor1, $valor2);
+                $resto = $valor1 % $valor2;
             ?>
 
-
-            <h1>Estrutura da divisão</h1>
-            <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-                <label for="dividendo">Dividendo</label>
-                <input type="number" name="dividendo" id="IDdividendo">
-                <label for="divisor">Divisor</label>
-                <input type="number" name="divisor" id="IDdivisor">
-                <input type="submit" value="Dividir">
+            <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
+                <ul>
+                    <li>
+                        <label for="dividendo">Dividendo</label>
+                        <input type="number" name="dividendo" id="IDdividendo" value="<?=$valor1?>">
+                    </li>
+                    
+                    <li>
+                        <label for="divisor">Divisor</label>
+                        <input type="number" name="divisor" id="IDdivisor" value="<?=$valor2?>">
+                    </li>
+                    
+                    <input type="submit" value="Dividir">
+                </ul>
     
             </form>
 
 
         </main>
         <section>
-            <div><?php print "$valor1"; ?></div>
-            <div><?php print "$valor2";?></div>
-            <div><?php print "$total"; ?></div>
-            <div><?php print "$resto= fmod($valor1,$valor2)"; ?></div>
+        <h1>Estrutura da divisão</h1>
+            <div class="dividendo"><?php print "$valor1"; ?></div>
+            <div class="divisor"><?php print "$valor2";?></div>
+            <div class="quociente"><?php print "$total"; ?></div>
+            <div class="resto"><?php print "$resto"; ?></div>
 
         </section>
     </body>
