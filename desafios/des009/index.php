@@ -11,7 +11,7 @@
 
             $quadrada = $_GET['num'] ?? 0;
             $grauraiz = 3;
-            $cubica = $quadrada * (1/$grauraiz);
+            $cubica = $quadrada ** (1/$grauraiz);
  
         ?>
         <main>
@@ -26,8 +26,8 @@
         <section>
             <?php 
     
-                echo "<p>A raiz quadrada do número $quadrada é " . sqrt($quadrada) . "</p>";
-                echo "<p>A raiz cúbica do número $quadrada é $cubica <p/>";
+                echo "<p>A raiz quadrada do número $quadrada é " . number_format(sqrt($quadrada), 3, ",", ".") . "</p>";
+                echo "<p>A raiz cúbica do número $quadrada é " . number_format($cubica,3 , ",", "." ) . "<p/>";
             ?>
 
         </section>
