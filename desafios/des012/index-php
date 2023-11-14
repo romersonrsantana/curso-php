@@ -1,0 +1,21 @@
+<!Doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio 12</title>
+    </head>
+    <body>
+        <?php 
+            
+        ?>
+            <form action="" method="get">
+                <label for="dinheiro">valor monetario (R$)</label>
+                <input type="number" name="dinheiro" id="dinheiro">
+                <label for="porcentagem"></label>
+                <input type="number" name="porcentagem" id="porcentagem">
+                <input type="submit" value="Calcular">
+            </form>
+        </main>
+    </body>
+</html>
