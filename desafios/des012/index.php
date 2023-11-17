@@ -8,7 +8,7 @@
     <body>
         <?php 
            //var_dump($_SERVER);
-           $valor = $_GET['dinheiro'] ?? 0;
+           $valor = $_GET['dinheiro'] ?? 1;
            $porcent = $_GET ['porcentagem'] ?? 1;
 
         ?>
@@ -20,7 +20,8 @@
                     </li>
                     <li>
                         <label for="porcentagem">Porcentagem</label>
-                        <input type="number" name="porcentagem" id="porcentagem" value="<?=$porcent?>">
+                        <!--<input type="number" name="porcentagem" id="porcentagem" min="1" max="100" value="-->
+                        <input type="range" name="porcentagem" id="porcentagem" min="1" max="100" value="<?=$porcent?>">
                     </li>
                     <li><input type="submit" value="Calcular"></li>
                 </ul>
@@ -30,7 +31,7 @@
                 $reajuste = $valor*($porcent/100);
                 $total1 = ($valor + $reajuste);
 
-                print ""
+                print "Seu reajuste será de $reajuste reais, indo para o total de $total1 reais."
 
             ?>
         </main>
