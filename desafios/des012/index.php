@@ -8,20 +8,20 @@
     <body>
         <?php 
            //var_dump($_SERVER);
-           $valor = $_GET['dinheiro'] ?? 1;
-           $porcent = $_GET ['porcentagem'] ?? 1;
+           $valor = $_GET['dinheiro'] ?? '0.5';
+           $porcent = $_GET ['porcentagem'] ?? '1';
 
         ?>
             <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
                 <ul>
                     <li>
                         <label for="dinheiro">valor monetario (R$)</label>
-                        <input type="number" name="dinheiro" id="dinheiro" value="<?=$valor?>">
+                        <input type="number" name="dinheiro" id="dinheiro" step="0.01" min="0.5" value="<?=$valor?>">
                     </li>
                     <li>
-                        <label for="porcentagem">Porcentagem</label>
+                        <label for="porcentagem">Porcentagem (<strong><span id="p"> ? </span>% </strong>)
                         <!--<input type="number" name="porcentagem" id="porcentagem" min="1" max="100" value="-->
-                        <input type="range" name="porcentagem" id="porcentagem" min="1" max="100" value="<?=$porcent?>">
+                        <input type="range" name="porcentagem" id="porcentagem" min="1" max="100" step="1" value="<?=$porcent?>" oninput="mudavalor()">
                     </li>
                     <li><input type="submit" value="Calcular"></li>
                 </ul>
@@ -31,9 +31,21 @@
                 $reajuste = $valor*($porcent/100);
                 $total1 = ($valor + $reajuste);
 
-                print "Seu reajuste será de $reajuste reais, indo para o total de $total1 reais."
+                print "Seu reajuste de $porcent% será de R$ " . number_format($reajuste, 2, ",",".") . " reais, indo para o total de R$ " . number_format($total1, 2, ",", ".") . " reais."
 
             ?>
         </main>
+    <script>
+            //Declarações automaticas são chamadas todas as vezes que a página é carregada.
+
+            mudavalor()
+
+        function mudavalor(){
+            p.innerText = porcentagem.value;
+
+        }
+    </script>
+
+
     </body>
 </html>
