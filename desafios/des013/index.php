@@ -7,7 +7,17 @@
     </head>
     <body>
         <?php 
-            
+            //1 hora tem 3.600 segundos
+            //1 dia tem 86.400 segundos
+            $semana=0;
+            $dias=0;
+            $horas=0;
+            $minutos=0;
+            $segundos=0;
+
+            $resultado=(3000000%(86400*7)/86400);
+
+            echo"o resultado será $resultado";
         ?>
         <main>
             <h1>Calculadora de tempo</h1>
