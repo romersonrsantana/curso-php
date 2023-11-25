@@ -7,24 +7,52 @@
     </head>
     <body>
         <?php 
+            
             //1 hora tem 3.600 segundos
             //1 dia tem 86.400 segundos
-            $semana=0;
-            $dias=0;
-            $horas=0;
-            $minutos=0;
-            $segundos=0;
+            
+            $tempoSegund = $_GET['segundos'] ?? 60;
+            
+            //declarando as variáveis --> inicio
+                $semana="0";
+                $dia="0";
+                $horas="0";
+                $minutos="0";
+                //$segundos="0";
+            
+            //fim das declarações
 
-            $resultado=(3000000%(86400*7)/86400);
-
-            echo"o resultado será $resultado";
         ?>
         <main>
             <h1>Calculadora de tempo</h1>
-            <label for="segundos"></label>
-            <input type="number" name="segundos" id="segundos">
-            <input type="submit" value="Calcular">
+        
+            <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
+                
+                <label for="segundos"></label>
+                <input type="number" name="segundos" id="segundos" min="60" value="<?=$tempoSegund?>">
+                
+                <input type="submit" value="Calcular"> <!--botão de enviar-->
+            
+            </form> 
         </main>
+
+        <section>
+            <?php 
+
+                $semana = ((($tempoSegund/60)/60)/24)/7;
+                $dia = ((($tempoSegund/60)/60)/24)%7;
+
+                
+               
+                echo "$dia";
+
+
+            ?>
+            <h2>Vamos ao resultado</h2>
+            <p>O tempo escolhido em segundos equivalem á <?=$semana?> semanas!!</p>
+            <!--<p><?=$dia?> dias!!</p>
+            <p><?=$hora?> horas!!</p>-->
+        </section>
     </body>
 
 </html>
