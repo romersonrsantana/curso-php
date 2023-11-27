@@ -10,11 +10,12 @@
             
             //1 hora tem 3.600 segundos
             //1 dia tem 86.400 segundos
+            //7 dias 604.800 segundos
             
             $tempoSegund = $_GET['segundos'] ?? 60;
             
             //declarando as variáveis --> inicio
-                $semana="0";
+                //$semana="";
                 $dia="0";
                 $horas="0";
                 $minutos="0";
@@ -39,19 +40,15 @@
         <section>
             <?php 
 
-                $semana = ((($tempoSegund/60)/60)/24)/7;
-                $dia = ((($tempoSegund/60)/60)/24)%7;
-
+                $semana = ($tempoSegund/(86400*7));
+                $dia = ($tempoSegund%(86400*7));
                 
-               
-                echo "$dia";
 
 
             ?>
             <h2>Vamos ao resultado</h2>
-            <p>O tempo escolhido em segundos equivalem á <?=$semana?> semanas!!</p>
-            <!--<p><?=$dia?> dias!!</p>
-            <p><?=$hora?> horas!!</p>-->
+            <p>São <?=$semana?> semanas!!</p>
+            <p></p>
         </section>
     </body>
 
