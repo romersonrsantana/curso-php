@@ -29,7 +29,7 @@
         
             <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
                 
-                <label for="segundos"></label>
+                <label for="segundos">Segundos</label>
                 <input type="number" name="segundos" id="segundos" min="60" value="<?=$tempoSegund?>">
                 
                 <input type="submit" value="Calcular"> <!--botão de enviar-->
@@ -41,14 +41,19 @@
             <?php 
 
                 $semana = ($tempoSegund/(86400*7));
-                $dia = ($tempoSegund%(86400*7));
-                
+                $dia = ($tempoSegund%(86400*7)/86400);
+                $horas = (($tempoSegund%(86400*7))%86400)/3600;
+                $minutos = ((($tempoSegund%(86400*7))%86400)%3600)/60;
+                $segundos = ((($tempoSegund%(86400*7))%86400)%3600)%60;
 
 
             ?>
-            <h2>Vamos ao resultado</h2>
-            <p>São <?=$semana?> semanas!!</p>
-            <p></p>
+            <h2>Vamos ao resultado convertido</h2>
+            <p>São <?=(int)$semana?> semanas!!</p>
+            <p>São <?=(int)$dia?> dias</p>
+            <p>São <?=(int)$horas?> horas</p>
+            <p>São <?=(int)$minutos?> minutos</p>
+            <p>São <?=(int)$segundos?> segundos</p>
         </section>
     </body>
 
