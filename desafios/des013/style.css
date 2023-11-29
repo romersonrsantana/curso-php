@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-size: 100%; /*trata essas unidades em relação ao elemento pai*/
+    background-color: rgb(221, 187, 146);
+    margin-top: 36px;
+}
+
+main{
+    max-width: 50%;
+    font-size: 1.3em;
+    background-color: rgb(185, 155, 115);
+    margin: auto;
+    padding: 18px;
+    border-radius: 3px 6px;
+}
+main >h1{
+    text-align: center;
+    padding-bottom: 18px;
+    font-family: cursive, 'Times New Roman', Times, serif;
+}
+
+section{
+    max-width: 50%;
+    border: 2px solid rgb(109, 88, 62); /*largura, tipo, cor*/
+    border-radius: 0px 0px 18px 18px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    margin: auto;
+    padding: 18px;
+    /*background-color: rgb(109, 88, 62);*/
+    background-color: white;
+}
+
+section h2{
+    font-family: cursive, 'Times New Roman', Times, serif;
+}

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculadora de tempo</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <?php 
@@ -48,7 +49,7 @@
 
 
             ?>
-            <h2>Vamos ao resultado convertido</h2>
+            <h2>Vamos ao resultado convertido:</h2>
             <p>São <?=(int)$semana?> semanas!!</p>
             <p>São <?=(int)$dia?> dias</p>
             <p>São <?=(int)$horas?> horas</p>
