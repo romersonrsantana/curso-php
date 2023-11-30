@@ -15,6 +15,7 @@ main{
     max-width: 50%;
     font-size: 1.3em;
     background-color: rgb(185, 155, 115);
+    border: 1.5px solid rgb(109, 88, 62);;
     margin: auto;
     padding: 18px;
     border-radius: 3px 6px;
@@ -25,7 +26,7 @@ main >h1{
     font-family: cursive, 'Times New Roman', Times, serif;
 }
 
-section{
+section {
     max-width: 50%;
     border: 2px solid rgb(109, 88, 62); /*largura, tipo, cor*/
     border-radius: 0px 0px 18px 18px;
@@ -38,6 +39,29 @@ section{
     background-color: white;
 }
 
-section h2{
+section. h2{
     font-family: cursive, 'Times New Roman', Times, serif;
+}
+
+form label{
+    display: block;
+    
+}
+input[type=number] {
+    width: 70%;
+    font-size: 0.9em;
+    padding: 8px;
+    margin: 6px;
+    border-radius: 6px;
+    border-style: none;
+}
+input[type=submit]{
+    width: 100px;
+    display: block;
+    border-style: none;
+    border-radius: 6px;
+    padding: 8px;
+    margin-left: 6px;
+    font-size: 0.8em;
+    cursor: pointer;
 }

@@ -30,10 +30,10 @@
         
             <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
                 
-                <label for="segundos">Segundos</label>
+                <label for="segundos">Digite os segundos</label>
                 <input type="number" name="segundos" id="segundos" min="60" value="<?=$tempoSegund?>">
                 
-                <input type="submit" value="Calcular"> <!--botão de enviar-->
+                <input type="submit" value="Calcular" class="interacao"> <!--botão de enviar-->
             
             </form> 
         </main>
