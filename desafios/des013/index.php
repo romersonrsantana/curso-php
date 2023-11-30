@@ -47,8 +47,9 @@
                 $minutos = ((($tempoSegund%(86400*7))%86400)%3600)/60;
                 $segundos = ((($tempoSegund%(86400*7))%86400)%3600)%60;
 
-
+                echo "<p> Você digitou o valor total de <strong>" . number_format($tempoSegund , 2 , ',' , '.') . "</strong> segundos </p>";
             ?>
+
             <h2>Vamos ao resultado convertido:</h2>
             <p>São <?=(int)$semana?> semanas!!</p>
             <p>São <?=(int)$dia?> dias</p>

@@ -3,12 +3,22 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: cursive, 'Times New Roman', Times, serif;;
 }
 
 body{
     font-size: 100%; /*trata essas unidades em relação ao elemento pai*/
     background-color: rgb(221, 187, 146);
     margin-top: 36px;
+}
+
+h1,h2{
+    color: rgb(95, 77, 54);
+}
+
+h2{
+    margin-top: 7.2px;
+    margin-bottom: 5px;
 }
 
 main{
@@ -23,7 +33,6 @@ main{
 main >h1{
     text-align: center;
     padding-bottom: 18px;
-    font-family: cursive, 'Times New Roman', Times, serif;
 }
 
 section {
@@ -37,10 +46,6 @@ section {
     padding: 18px;
     /*background-color: rgb(109, 88, 62);*/
     background-color: white;
-}
-
-section. h2{
-    font-family: cursive, 'Times New Roman', Times, serif;
 }
 
 form label{
@@ -64,4 +69,9 @@ input[type=submit]{
     margin-left: 6px;
     font-size: 0.8em;
     cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: rgb(95, 77, 54);
+    color: white;
+    font-weight: bolder;
 }
