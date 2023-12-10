@@ -9,12 +9,12 @@
         <main>
             <?php
             
-            $dinheiro = $_GET["valor"] ?? $dinheiro;
+            $dinheiro = $_GET["valor"] ?? 0;
             
             ?>
             <form action="" method="get">
                 <label for="valor">Digite um valor para saque</label>
-                <input type="number" name="valor" id="valor" min="5" max="1500" value="<?=$dinheiro?>">
+                <input type="number" name="valor" id="valor" step="5" min="0" max="1500" value="<?=$dinheiro?>">
                 <input type="submit" value="sacar">
             </form>
         </main>
